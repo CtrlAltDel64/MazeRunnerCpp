@@ -5,17 +5,15 @@ using namespace std;
 class Path {
 private:
   string name;
-  int count = 0;
-  Path * left;
-  Path * right;
+  Path * left = NULL;
+  Path * right = NULL;
 
 public:
   Path(string name):name(name){}
 
-  int GetCount();
+  string GetName();
   Path * GetLeft();
   Path * GetRight();
-  void CountIncrement();
   void SetLeft(Path* p1);
   void SetRight(Path* p2);
 };

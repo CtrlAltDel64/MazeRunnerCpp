@@ -4,7 +4,7 @@
 int main() {
     Path * start = new Path("start");
     Path * finish = new Path("finish");
-    Path* current = nullptr;
+    Path * current = nullptr;
 
     std::stack<Path *> last_intr;
 
@@ -26,9 +26,9 @@ int main() {
     current = current->GetLeft();
 
     current->SetLeft(new Path("06x"));
-    
+
     current = last_intr.top();
-    last_intr.pop();
+
 
     current->SetRight(new Path("07"));
     current = current->GetRight();
@@ -55,7 +55,7 @@ int main() {
     current->SetLeft(new Path("14x"));
 
     current = last_intr.top();
-    last_intr.pop();
+
 
     current->SetLeft(new Path("15"));
     current= current->GetLeft();
@@ -71,7 +71,7 @@ int main() {
     current = last_intr.top();
     last_intr.pop();
     current = last_intr.top();
-    last_intr.pop();
+
 
     current->SetLeft(new Path("19"));
     current= current->GetLeft();
@@ -84,7 +84,7 @@ int main() {
     last_intr.push(current);
 
     current->SetLeft(new Path("22"));
-    current= current->GetLeft(); 
+    current= current->GetLeft();
 
     current->SetLeft(new Path("23"));
     current= current->GetLeft();
@@ -92,7 +92,7 @@ int main() {
     current->SetLeft(new Path("24x"));
 
     current = last_intr.top();
-    last_intr.pop();
+
 
     current->SetRight(new Path("25"));
     current= current->GetRight();
@@ -112,7 +112,7 @@ int main() {
 
     current->SetLeft(new Path("30"));
     current= current->GetLeft();
-     
+
     current->SetLeft(new Path("31*"));
     current= current->GetLeft();
     last_intr.push(current);
@@ -121,9 +121,9 @@ int main() {
     current= current->GetRight();
 
     current->SetRight(new Path("33x"));
-    
+
     current = last_intr.top();
-    last_intr.pop();
+
 
     current->SetLeft(new Path("34"));
     current= current->GetLeft();
@@ -144,7 +144,7 @@ int main() {
     current->SetLeft(new Path("39x"));
 
     current = last_intr.top();
-    last_intr.pop();
+
 
     current->SetRight(new Path("40"));
     current= current->GetRight();
@@ -159,7 +159,7 @@ int main() {
     current = last_intr.top();
     last_intr.pop();
     current = last_intr.top();
-    last_intr.pop();
+
 
     current->SetRight(new Path("43"));
     current= current->GetRight();
@@ -179,12 +179,14 @@ int main() {
     current->SetRight(new Path("48"));
     current= current->GetRight();
 
-    finish ->  SetLeft(new Path("49x"));
-    current = finish ->GetLeft();
+    current->SetRight(new Path("49x")); //new line
+
+    //finish ->  SetLeft(new Path("49x"));
+    //current = finish ->GetLeft();
 
 
 
-    
+
 
     return  0;
 }

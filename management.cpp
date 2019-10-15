@@ -1,17 +1,13 @@
-
 #include "management.hpp"
 
-int Path::GetCount() {
-  return count;
+string Path::GetName() {
+  return name;
 }
 Path * Path::GetLeft() {
   return left;
 }
 Path * Path::GetRight() {
   return right;
-}
-void Path::CountIncrement() {
-  count++;
 }
 void Path::SetLeft(Path* p){
     this-> left = p;
